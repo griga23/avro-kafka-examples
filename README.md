@@ -3,7 +3,8 @@ Jan's example how to work with Confluent Cloud and Schema Registry using Avro ba
 
 How to run:
 1) Compile with all dependencies
-mvn clean compile assembly:single
+
+_mvn clean compile assembly:single_
 
 2) Run examples 
 
