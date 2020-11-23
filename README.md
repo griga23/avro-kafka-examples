@@ -6,7 +6,9 @@ How to run:
 
 _mvn clean compile assembly:single_
 
-2) Run examples 
+2) Edit application.properties to point to your Kafka and Schema Registry.
+
+3) Run examples 
 
 * Send message based on the Java object that was created from Avro Schema
 
