@@ -1,7 +1,8 @@
 # avro-kafka-examples
-Jan's example how to work with Confluent Cloud and Schema Registry using Avro based events
+Jan's example how to work with Kafka and Schema Registry using Avro based events. Also works with Confluent Cloud.
 
 How to run:
+
 ## Compile Java App
 Compile with all dependencies
 
@@ -12,6 +13,7 @@ Edit application.properties to point to your Kafka and Schema Registry.
 
 You can set all properties in [/application.properties](/application.properties) or you can overwrite the properties as runtime parameters.
 
+## Run examples
 * Send message based on the Java object that was created from Avro Schema
 ```
 java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerCCloudDemo application.properties
