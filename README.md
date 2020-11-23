@@ -11,7 +11,7 @@ _mvn clean compile assembly:single_
 ## Set App properties
 Edit application.properties to point to your Kafka and Schema Registry.
 
-You can set all properties in [application.properties](application.properties). Don't forget to set Kafka Topics.
+You can set all properties in [/application.example.properties](/application.example.properties). Don't forget to set Kafka Topics. Then rename the file to application.properties
 
 ## Run examples
 * Send message based on the Java object that was created from Avro Schema
