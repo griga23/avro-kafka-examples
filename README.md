@@ -30,7 +30,7 @@ java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.g
 
 * Send message based on the JSON message that was converted to Avro message and validated with a local Avro Schema
 ```
-java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerGenericCCloudDemo application.properties
+java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerGenericJsonToAvroDemo application.properties
 
 ```
 
