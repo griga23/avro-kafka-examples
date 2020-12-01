@@ -13,6 +13,7 @@ example.log.1
 .idea/
 application.properties
 jans-examples.iml
+<<<<<<< HEAD
 .settings/org.eclipse.core.resources.prefs
 .settings/org.eclipse.jdt.apt.core.prefs
 .settings/org.eclipse.jdt.core.prefs
@@ -21,3 +22,5 @@ jans-examples.iml
 .gitignore
 .project
 jans-avro-examples.iml
+=======
+>>>>>>> c70b44e426665722518c1307bc08c66756281e29
