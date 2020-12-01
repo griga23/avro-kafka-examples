@@ -64,7 +64,7 @@ public class KafkaAvroProducerGenericJsonToAvroDemo {
         producer.flush();
         producer.close();
 
-        System.out.println("Generic ProducerRecord sent to Kafka!");
+        System.out.println("Generic ProducerRecord build from Json sent to Kafka!");
 
     }
 

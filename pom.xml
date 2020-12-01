@@ -29,7 +29,6 @@
 
 
     <dependencies>
-<<<<<<< HEAD
 
         <!-- https://mvnrepository.com/artifact/tech.allegro.schema.json2avro/converter -->
         <dependency>
@@ -38,8 +37,6 @@
             <version>0.2.9</version>
         </dependency>
 
-=======
->>>>>>> c70b44e426665722518c1307bc08c66756281e29
         <!--Only dependency needed for the avro part-->
         <!-- https://mvnrepository.com/artifact/org.apache.avro/avro -->
         <dependency>
