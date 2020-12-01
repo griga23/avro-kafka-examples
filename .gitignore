@@ -13,3 +13,11 @@ example.log.1
 .idea/
 application.properties
 jans-examples.iml
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.jdt.apt.core.prefs
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+.classpath
+.gitignore
+.project
+jans-avro-examples.iml

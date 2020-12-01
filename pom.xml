@@ -29,6 +29,14 @@
 
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/tech.allegro.schema.json2avro/converter -->
+        <dependency>
+            <groupId>tech.allegro.schema.json2avro</groupId>
+            <artifactId>converter</artifactId>
+            <version>0.2.9</version>
+        </dependency>
+
         <!--Only dependency needed for the avro part-->
         <!-- https://mvnrepository.com/artifact/org.apache.avro/avro -->
         <dependency>
