@@ -1,23 +1,4 @@
 # avro-kafka-examples
-<<<<<<< HEAD
-Jan's example how to work with Confluent Cloud and Schema Registry using Avro based events
-
-How to run:
-1) Compile with all dependencies
-mvn clean compile assembly:single
-
-2) Run examples 
-
-java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerCCloudDemo application.properties
-
-java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerGenericCCloudDemo application.properties
-
-java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerGenericSchemaDownloadCCloudDemo application.properties
-
-java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroConsumerCCloudDemo application.properties
-
-java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroConsumerGenericCCloudDemo application.properties
-=======
 Jan's example how to work with Kafka and Schema Registry using Avro based events. Also works with Confluent Cloud.
 * Example schema is defined at: [/src/main/resources/avro/customer-v1.avsc](/src/main/resources/avro/customer-v1.avsc)
 * Java Class Customer will be automatically generated target/generated-sources/avro/com/github/griga23
@@ -61,4 +42,3 @@ java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.g
 ```
 java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroConsumerGenericCCloudDemo application.properties
 ```
->>>>>>> c70b44e426665722518c1307bc08c66756281e29
