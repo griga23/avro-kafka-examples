@@ -48,3 +48,12 @@ java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.g
 ```
 java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroConsumerGenericCCloudDemo application.properties
 ```
+
+## Run examples with Data Validation Rules
+* Post new Schema with Data Validation to Confluent Cloud Schema Registry
+```
+curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" \
+    --data ''\
+https://xxx.confluent.cloud/subjects/customer-avro-value/versions
+```
+Inside of the data '' must be the escaped schema and the data validation rules. Example is in [/conditionRulesExample.json](conditionRulesExample.json). 
