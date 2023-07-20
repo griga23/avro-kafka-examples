@@ -55,9 +55,10 @@ java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.g
 ```
 curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" \
     --data ''\
-https://xxx.confluent.cloud/subjects/customer-avro-value/versions
+https://xxx/subjects/customer-avro-value/versions
 ```
 Inside of the data '' must be the escaped schema and the data validation rules. Example is in [/conditionRulesExample.json](conditionRulesExample.json).
+I use Postman but any other tool can be used to do REST POST to create a new schema in SR
 
 * Send message based on the Java object Customer that was created from Avro Schema
 ```
