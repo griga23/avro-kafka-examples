@@ -3,12 +3,17 @@ package com.github.griga23;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.errors.SerializationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class KafkaAvroProducerCCloudDemo {
+
+    private static Logger logger = LoggerFactory.getLogger(KafkaAvroProducerCCloudDemo.class);
 
     public static void main(String[] args) throws IOException {
 
@@ -36,16 +41,21 @@ public class KafkaAvroProducerCCloudDemo {
         // serialize single Kafka ProducerRecord based on the Customer object
         ProducerRecord<String, Customer> producerRecord =
                 new ProducerRecord<String, Customer>(topic, customer.getLastName(), customer);
-        System.out.println(customer);
+        logger.info("Customer ProducerRecord created: " + customer.toString());
 
         // send ProducerRecord to Kafka Broker in CCloud
-        producer.send(producerRecord);
-
-        // close Producer to CCloud
-        producer.flush();
-        producer.close();
-
-        System.out.println("ProducerRecord sent successfully to Kafka!");
+        try{
+            producer.send(producerRecord);
+            logger.info("ProducerRecord sent successfully to Kafka!");
+        }catch (SerializationException e){
+            logger.warn(e.getCause().getMessage());
+            logger.warn("ProducerRecord sent to DLQ!");
+//            e.printStackTrace();
+        }
+        finally {
+            producer.flush();
+            producer.close();
+        }
     }
 
     // load properties from some file
