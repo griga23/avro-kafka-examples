@@ -1,6 +1,7 @@
 # avro-kafka-examples
 Jan's example how to work with Kafka and Schema Registry using Avro based events. Also works with Confluent Cloud.
 * Example schema is defined at: [/src/main/resources/avro/customer-v1.avsc](/src/main/resources/avro/customer-v1.avsc)
+* Example schema with data validation roles is  at:  [/conditionRulesExample.json](conditionRulesExample.json)
 * Java Class Customer will be automatically generated target/generated-sources/avro/com/github/griga23
 
 
@@ -56,4 +57,16 @@ curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" \
     --data ''\
 https://xxx.confluent.cloud/subjects/customer-avro-value/versions
 ```
-Inside of the data '' must be the escaped schema and the data validation rules. Example is in [/conditionRulesExample.json](conditionRulesExample.json). 
+Inside of the data '' must be the escaped schema and the data validation rules. Example is in [/conditionRulesExample.json](conditionRulesExample.json).
+
+* Send message based on the Java object Customer that was created from Avro Schema
+```
+java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerCCloudDemo application.properties
+```
+
+* Send message based on the Generic object that was validated with a local Avro Schema
+```
+java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.griga23.KafkaAvroProducerGenericCCloudDemo application.properties
+
+```
+Change age in the producer to save message in the DLQ topic
