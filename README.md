@@ -51,6 +51,7 @@ java -cp target/avro-kafka-examples-1.0-SNAPSHOT-jar-with-dependencies.jar com.g
 ```
 
 ## Run examples with Data Validation Rules
+Please look at the official Confluent example [here](https://docs.confluent.io/platform/current/schema-registry/fundamentals/data-contracts.html#quick-start) 
 * Post new Schema with Data Validation to Confluent Cloud Schema Registry
 ```
 curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" \
