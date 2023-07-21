@@ -17,6 +17,9 @@ Edit application.properties to point to your Kafka and Schema Registry.
 
 You can set all properties in [/application.example.properties](/application.example.properties). Don't forget to set Kafka Topics. Then rename the file to application.properties
 
+## Prepare example file
+Edit  [customerEvent.json](customerEvent.json) to push this to the Kafka topic.
+
 ## Run examples
 * Send message based on the Java object Customer that was created from Avro Schema
 ```
